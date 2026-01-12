@@ -46,17 +46,17 @@ class GetInTouchSection extends StatelessWidget {
               ContactItem(
                 icon: Icons.email,
                 label: 'Email',
-                value: 'vaishanvi.ingole53@gmail.com',
+                value: 'rajkumar07793@gmail.com',
               ),
               ContactItem(
                 icon: Icons.location_on,
                 label: 'Location',
-                value: 'Pune, Maharashtra',
+                value: 'Kareli, Narsinghpur, Madhya Pradesh',
               ),
               ContactItem(
                 icon: Icons.phone,
                 label: 'Phone',
-                value: '9673108423',
+                value: '9977783414',
               ),
             ],
           ),
@@ -69,7 +69,7 @@ class GetInTouchSection extends StatelessWidget {
                   onTap: () async {
                     if (!await launchUrl(
                         Uri.parse("https://www.linkedin"
-                            ".com/in/vaishanvi-ingole-a72761218"),
+                            ".com/in/rajkumar07793"),
                         mode: LaunchMode.externalApplication)) {
                       Fluttertoast.showToast(
                         msg: "SomeThing went wrong",
@@ -84,8 +84,7 @@ class GetInTouchSection extends StatelessWidget {
               InkWell(
                   onTap: () async {
                     if (!await launchUrl(
-                        Uri.parse(
-                            "https://www.instagram.com/___vaishanvi/profilecard/?igsh=cW5pd3VyeXA1M2Yw"),
+                        Uri.parse("https://www.instagram.com/rajkumar07793/"),
                         mode: LaunchMode.externalApplication)) {
                       Fluttertoast.showToast(
                         msg: "SomeThing went wrong",

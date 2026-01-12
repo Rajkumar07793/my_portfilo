@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:oliftrop/components/common_text.dart';
-import 'package:oliftrop/controller/about_controller.dart';
 import 'package:oliftrop/ui/widgets/about_widget.dart';
 import 'package:oliftrop/ui/widgets/contact_widget.dart';
-import 'package:oliftrop/ui/widgets/down_load_cv_button.dart';
 import 'package:oliftrop/ui/widgets/journey_view_widget.dart';
 import 'package:oliftrop/ui/widgets/project_view_widget.dart';
 import 'package:oliftrop/ui/widgets/skills_view_widget.dart';

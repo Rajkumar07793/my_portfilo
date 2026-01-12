@@ -11,27 +11,27 @@ class SocialWidget extends StatelessWidget {
   final List<_SocialLink> _socialLinks = const [
     _SocialLink(
       icon: FontAwesomeIcons.linkedinIn,
-      url: "https://www.linkedin.com/in/vaishanvi-ingole-a72761218",
+      url: "https://www.linkedin.com/in/rajkumar07793",
       tooltip: "LinkedIn",
     ),
     _SocialLink(
       icon: FontAwesomeIcons.github,
-      url: "https://github.com/vaishu159",
+      url: "https://github.com/rajkumar07793",
       tooltip: "GitHub",
     ),
     _SocialLink(
       icon: FontAwesomeIcons.phone,
-      url: "tel:9673108423",
+      url: "tel:9977783414",
       tooltip: "Phone",
     ),
     _SocialLink(
       icon: Icons.email,
-      url: "mailto:vaishanvi.ingole53@gmail.com",
+      url: "mailto:rajkumar07793@gmail.com",
       tooltip: "Email",
     ),
     _SocialLink(
       icon: FontAwesomeIcons.medium,
-      url: "https://medium.com/@vaishanviingole096",
+      url: "https://medium.com/@rajkumar07793",
       tooltip: "Medium",
     ),
   ];

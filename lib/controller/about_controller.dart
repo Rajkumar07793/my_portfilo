@@ -7,7 +7,7 @@ class AboutController {
     await _remoteConfig.setDefaults({
       'passionate_text': 'Default about text',
       'cv_url':
-          'https://firebasestorage.googleapis.com/v0/b/electronics-a101d.appspot.com/o/vaishanvi_cv.pdf?alt=media&token=8f344cd9-d859-4ef4-a47d-3fdb9509ba6e',
+          'https://drive.google.com/file/d/1dE0n7WbQHZ085O5bwzihNiI0QjqsTONh/view?usp=sharing',
     });
     await _remoteConfig.fetchAndActivate();
   }

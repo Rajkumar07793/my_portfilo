@@ -4,6 +4,7 @@ import 'package:oliftrop/controller/about_controller.dart';
 import 'package:oliftrop/ui/widgets/down_load_cv_button.dart';
 import 'package:oliftrop/ui/widgets/socail_widget.dart';
 import 'package:oliftrop/utils/responsive.dart';
+
 import '../../components/app_colors.dart';
 import '../../components/common_text.dart';
 
@@ -51,7 +52,7 @@ class AboutWidget extends StatelessWidget {
           : CrossAxisAlignment.start,
       children: [
         CommonText(
-          text: "Vaishanvi Ingole",
+          text: "Raj kumar Patel",
           color: AppColors.blue,
           fontSize: 25,
           fontWeight: FontWeight.bold,
@@ -59,7 +60,7 @@ class AboutWidget extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         CommonText(
-          text: "Android Developer",
+          text: "Sr. Flutter Developer",
           color: AppColors.white,
           fontWeight: FontWeight.bold,
           fontSize: 30,

@@ -30,10 +30,9 @@ analysis_options.yaml
 .packages
 .pub-cache/
 .pub/
-/build/
+# /build/
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
@@ -76,10 +75,14 @@ analysis_options.yaml
 .packages
 .pub-cache/
 .pub/
-/build/
+# /build/
+build/native_hooks
+build/native_assets
+build/flutter_assets
+build/3c8332cab77d3016a05bf9ec1dc4e913
+build/6ab642d2d29d49c7c5f5a6d85fcef46b.cache.dill.track.dill
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols

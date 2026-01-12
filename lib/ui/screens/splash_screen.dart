@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:go_router/go_router.dart';
 import 'package:oliftrop/controller/about_controller.dart';
 import 'package:oliftrop/controller/journey_controller.dart';
@@ -83,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen>
                       child: AboutWidget().buildProfileImage()),
                   const SizedBox(height: 20),
                   const Text(
-                    "Vaishanvi Ingole",
+                    "Raj kumar Patel",
                     style: TextStyle(
                       fontSize: 32,
                       color: Colors.white,
