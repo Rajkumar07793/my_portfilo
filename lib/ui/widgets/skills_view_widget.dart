@@ -15,15 +15,13 @@ class SkillsViewWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (con.mobileSkills.isNotEmpty)
-              buildCategory("Mobile/Web Development", Icons.phone_android,
-                  con.mobileSkills),
-            if (con.programmingSkills.isNotEmpty)
-              buildCategory(
-                  "Programming Languages", Icons.code, con.programmingSkills),
-            if (con.databaseSkills.isNotEmpty)
-              buildCategory(
-                  "Database Management", Icons.storage, con.databaseSkills),
+            ...con.skillCategories.map((category) {
+              return buildCategory(
+                category["title"],
+                getCategoryIcon(category["title"]),
+                category["skills"],
+              );
+            }).toList(),
           ],
         ),
       );
@@ -113,5 +111,17 @@ class SkillsViewWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  IconData getCategoryIcon(String title) {
+    if (title.contains("Core")) return Icons.build;
+    if (title.contains("State")) return Icons.layers;
+    if (title.contains("Backend")) return Icons.cloud;
+    if (title.contains("Database")) return Icons.storage;
+    if (title.contains("Payment")) return Icons.payment;
+    if (title.contains("DevOps")) return Icons.settings_input_component;
+    if (title.contains("Platform")) return Icons.devices;
+    if (title.contains("Programming")) return Icons.code;
+    return Icons.folder;
   }
 }

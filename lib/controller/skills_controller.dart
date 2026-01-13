@@ -1,14 +1,11 @@
 import 'dart:convert';
-import 'package:get/get.dart';
+
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SkillsController extends GetxController {
-  final RxList<Map<String, dynamic>> mobileSkills =
-      <Map<String, dynamic>>[].obs;
-  final RxList<Map<String, dynamic>> programmingSkills =
-      <Map<String, dynamic>>[].obs;
-  final RxList<Map<String, dynamic>> databaseSkills =
+  final RxList<Map<String, dynamic>> skillCategories =
       <Map<String, dynamic>>[].obs;
 
   var isLoading = true.obs;
@@ -29,12 +26,25 @@ class SkillsController extends GetxController {
       ));
       await remoteConfig.fetchAndActivate();
 
-      final dataString = remoteConfig.getString('skills_data');
-      final Map<String, dynamic> decoded = jsonDecode(dataString);
+      final dataString =
+          remoteConfig.getString('skills'); //skills_data used previously
+      if (dataString.isNotEmpty) {
+        final Map<String, dynamic> decoded = jsonDecode(dataString);
 
-      mobileSkills.value = parseSkills(decoded['mobileSkills']);
-      programmingSkills.value = parseSkills(decoded['programmingSkills']);
-      databaseSkills.value = parseSkills(decoded['databaseSkills']);
+        List<Map<String, dynamic>> loadedCategories = [];
+
+        decoded.forEach((key, value) {
+          if (value is List) {
+            loadedCategories.add({
+              "title": key,
+              "skills": parseSkills(value),
+            });
+          }
+        });
+
+        skillCategories.value = loadedCategories;
+      }
+
       isLoading.value = false;
     } catch (e) {
       print("❌ Error fetching skills: $e");
@@ -61,6 +71,22 @@ class SkillsController extends GetxController {
         return Icons.cloud;
       case "storage":
         return Icons.storage;
+      case "apple":
+        return Icons.apple;
+      case "settings":
+        return Icons.settings;
+      case "architecture":
+        return Icons.architecture;
+      case "api":
+        return Icons.api;
+      case "security":
+        return Icons.security;
+      case "build":
+        return Icons.build;
+      case "layers":
+        return Icons.layers;
+      case "payment":
+        return Icons.payment;
       default:
         return Icons.device_unknown;
     }
